@@ -1,23 +1,43 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "intro",
+    component: () => import("@/views/base/intro.vue")
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/template-syntax",
+    name: "templateSyntax",
+    component: () => import("@/views/base/template-syntax.vue")
+  },
+  {
+    path: "/computed-and-watcher",
+    name: "computedWatcher",
+    component: () => import("@/views/base/computed-and-watcher.vue")
+  },
+  {
+    path: "/condition-and-list-render",
+    name: "conditionList",
+    component: () => import("@/views/base/condition-and-list-render.vue")
+  },
+  {
+    path: "/event-handle",
+    name: "eventHandle",
+    component: () => import("@/views/base/event-handle.vue")
+  },
+  {
+    path: "/form-input-bind",
+    name: "formInputBind",
+    component: () => import("@/views/base/form-input-bind.vue")
+  },
+  {
+    path: "/lifecycle",
+    name: "lifeCycle",
+    component: () => import("@/views/base/lifecycle.vue")
   }
 ];
 
