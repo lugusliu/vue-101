@@ -20,6 +20,11 @@ const routes = [
     component: () => import("@/views/base/computed-and-watcher.vue")
   },
   {
+    path: "/class-and-style",
+    name: "classStyle",
+    component: () => import("@/views/base/class-and-style.vue")
+  },
+  {
     path: "/condition-and-list-render",
     name: "conditionList",
     component: () => import("@/views/base/condition-and-list-render.vue")

@@ -11,10 +11,10 @@
     <p>
       计算属性是基于它们的响应式依赖进行缓存的。只在相关响应式依赖发生改变时它们才会重新求值
     </p>
-    <p>计算属性：{{ reverseMsgByComputed }}</p>
-    <p>计算属性：{{ reverseMsgByComputed }}</p>
-    <p>方法：{{ reverseMsgByMethod() }}</p>
-    <p>方法：{{ reverseMsgByMethod() }}</p>
+    <p>第一次调用计算属性：{{ reverseMsgByComputed }}</p>
+    <p>第二次调用计算属性：{{ reverseMsgByComputed }}</p>
+    <p>第一次调用方法：{{ reverseMsgByMethod() }}</p>
+    <p>第二次调用方法：{{ reverseMsgByMethod() }}</p>
     <p>fullName: {{ fullName }}</p>
     <p>firstName: {{ firstName }}</p>
     <p>lastName: {{ lastName }}</p>

@@ -6,6 +6,7 @@
       <router-link class="link" to="/computed-and-watcher"
         >计算语法和侦听器</router-link
       >
+      <router-link class="link" to="/class-and-style">类与内联样式</router-link>
       <router-link class="link" to="/condition-and-list-render"
         >条件与列表渲染</router-link
       >
