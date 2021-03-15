@@ -1,21 +1,63 @@
 <template>
   <div class="fib">
-    <div class="intro">
-      v-model 会忽略所有表单元素的 value、checked、selected attribute
-      的初始值而总是将 Vue 实例的数据作为数据来源<br />
-      v-model 在内部为不同的输入元素使用不同的 property 并抛出不同的事件<br />
-      text 和 textarea 使用 value property 和 input 事件<br />
-      checkbox 和 radio 使用 checked property 和 change 事件<br />
-      select 字段将 value 作为 prop 并将 change 作为事件
+    <div class="fib-input">
+      <p>input</p>
+      <input v-model="inputValue" type="text" /> : {{ inputValue }}
+    </div>
+    <div class="fib-textarea">
+      <p>textarea</p>
+      <textarea v-model="textareaValue" /> : {{ textareaValue }}
+    </div>
+    <div class="fib-checkbox">
+      <p>checkbox</p>
+      <input type="checkbox" id="jack" value="Jack" v-model="checkboxValue" />
+      <label for="jack"> Jack </label>
+      <input type="checkbox" id="john" value="John" v-model="checkboxValue" />
+      <label for="john"> John </label>
+      <input type="checkbox" id="mike" value="Mike" v-model="checkboxValue" />
+      <label for="mike"> Mike </label>
+      : {{ checkboxValue }}
+    </div>
+    <div class="fib-radio">
+      <p>radio</p>
+      <input type="radio" id="one" value="One" v-model="radioValue" />
+      <label for="one"> One </label>
+      <input type="radio" id="two" value="Two" v-model="radioValue" />
+      <label for="two"> Two </label>
+      : {{ radioValue }}
+    </div>
+    <div class="fib-selected">
+      <p>selected</p>
+      <select v-model="selectedValue">
+        <option
+          v-for="option in options"
+          :key="option.value"
+          value="option.value"
+          >{{ option.value }}</option
+        >
+      </select>
+      : {{ selectedValue }}
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.fib {
-  .intro {
-    line-height: 1.5;
-    color: #8c8c8c;
+<script>
+export default {
+  data() {
+    return {
+      inputValue: "",
+      textareaValue: "",
+      checkboxValue: [],
+      radioValue: "",
+      selectedValue: "",
+      options: [
+        { text: "One", value: "A" },
+        { text: "Two", value: "B" },
+        { text: "Three", value: "C" }
+      ]
+    };
   }
-}
-</style>
+};
+</script>
+
+<style lang="scss" scoped></style>
