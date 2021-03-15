@@ -1,10 +1,11 @@
 <template>
   <div class="eh">
     <div class="eh-x">
-      普通事件处理方法 <button @click="handleNormal">点击</button>
+      普通事件处理方法 @click = "handleNormal"<br />
+      <button @click="handleNormal">点击</button>
     </div>
     <div class="eh-x">
-      内联处理器中的方法
+      内联处理器中的方法 @click = "handleInline('event', $event)"<br />
       <button @click="handleInline('event', $event)">点击</button>
     </div>
     <div class="eh-x">
@@ -16,7 +17,14 @@
       </div>
     </div>
     <div class="eh-x">
-      按键修饰符 .enter <input v-on:keyup.enter="submit" />
+      按键修饰符 .enter <br />
+      <input v-on:keyup.enter="submit" />
+    </div>
+    <div class="eh-x">
+      提交事件重载页面
+      <form @submit="submit">
+        <input type="text" />
+      </form>
     </div>
     <div class="eh-x">
       提交事件不再重载页面 .prevent
@@ -39,11 +47,11 @@ export default {
     clickChild() {
       alert("child clicked");
     },
-    clickParent() {
-      alert("parent clicked");
-    },
     clickParentWidthSelf() {
       alert("parent clicked width .self");
+    },
+    clickParent() {
+      alert("parent's parent clicked");
     },
     submit() {
       alert("submit trigger");

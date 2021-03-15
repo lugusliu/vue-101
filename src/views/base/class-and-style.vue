@@ -12,10 +12,11 @@
     <div class="static" :class="[info, underline]">
       class 绑定到一个数组上
     </div>
-    <div class="tips">
+    <div class="static">
       在一个自定义组件上使用 class property 时，这些 class
       将被添加到该组件的跟元素上面，这个元素上已经存在的 class 不会被覆盖
     </div>
+    <br />
     <br />
     <div class="static" :style="{ color: activeColor, fontWeight: '600' }">
       style 绑定到一个对象上 { color: activeColor, fontWeight: '600' }
@@ -65,6 +66,7 @@ export default {
   }
   .static {
     font-size: 24px;
+    line-height: 1.5;
   }
   .active {
     color: #1890ff;

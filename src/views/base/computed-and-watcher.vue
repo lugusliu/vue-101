@@ -64,7 +64,7 @@ export default {
   mounted() {
     timer = setTimeout(() => {
       this.fullName = "Harry Potter";
-    }, 2000);
+    }, 5000);
   },
   beforeDestroy() {
     if (timer) {
