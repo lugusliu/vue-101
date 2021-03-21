@@ -13,6 +13,7 @@
       <router-link class="link" to="/event-handle">事件处理</router-link>
       <router-link class="link" to="/form-input-bind">表单输入绑定</router-link>
       <router-link class="link" to="/lifecycle">生命周期</router-link>
+      <router-link class="link" to="/slots">插槽</router-link>
     </div>
     <div class="main">
       <router-view />

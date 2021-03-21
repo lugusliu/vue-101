@@ -43,6 +43,11 @@ const routes = [
     path: "/lifecycle",
     name: "lifeCycle",
     component: () => import("@/views/base/lifecycle.vue")
+  },
+  {
+    path: "/slots",
+    name: "slots",
+    component: () => import("@/views/base/slots.vue")
   }
 ];
 
