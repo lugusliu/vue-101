@@ -3,17 +3,17 @@
     {{ log("render") }}
     {{ now }}
     <button @click="start = !start">{{ start ? "停止" : "开始" }}</button>
-    <ChildComponent />
+    <ClockChild />
   </div>
 </template>
 
 <script>
 import { formatTime } from "@/utils";
-import ChildComponent from "./ChildComponent";
+import ClockChild from "./ClockChild";
 
 export default {
   components: {
-    ChildComponent
+    ClockChild
   },
   data() {
     console.log("data");

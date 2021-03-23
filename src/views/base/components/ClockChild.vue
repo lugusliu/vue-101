@@ -1,5 +1,5 @@
 <template>
-  <div class="child-component">{{ log("child render") }}子组件</div>
+  <div class="child-component">{{ log("child render") }}时钟组件的子组件</div>
 </template>
 
 <script>
