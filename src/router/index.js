@@ -48,6 +48,11 @@ const routes = [
     path: "/slots",
     name: "slots",
     component: () => import("@/views/base/slots.vue")
+  },
+  {
+    path: "/directive",
+    name: "directive",
+    component: () => import("@/views/base/directive.vue")
   }
 ];
 
