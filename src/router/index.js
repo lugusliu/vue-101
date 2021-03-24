@@ -53,6 +53,11 @@ const routes = [
     path: "/directive",
     name: "directive",
     component: () => import("@/views/base/directive.vue")
+  },
+  {
+    path: "/provide-and-inject",
+    name: "provideInject",
+    component: () => import("@/views/base/provide-and-inject.vue")
   }
 ];
 

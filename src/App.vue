@@ -15,6 +15,9 @@
       <router-link class="link" to="/lifecycle">生命周期</router-link>
       <router-link class="link" to="/slots">插槽</router-link>
       <router-link class="link" to="/directive">指令</router-link>
+      <router-link class="link" to="/provide-and-inject"
+        >provide 和 inject</router-link
+      >
     </div>
     <div class="main">
       <router-view />
